@@ -1,8 +1,14 @@
 import Image from "next/image";
 import GoogleIcon from "../../assets/images/GoogleIcon.png";
+import Avatar from "../Avatar";
+import HeaderOptions from "./HeaderOptions";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import { XMarkIcon, MicrophoneIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import {
+  XMarkIcon,
+  MicrophoneIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/solid";
 
 const Header = () => {
   const router = useRouter();
@@ -49,7 +55,10 @@ const Header = () => {
             Search
           </button>
         </form>
+        <Avatar url="https://avatars.githubusercontent.com/u/106466193?v=4" />
       </div>
+
+      <HeaderOptions />
     </header>
   );
 };
